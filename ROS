@@ -1,0 +1,76 @@
+ROS:robot Operating System
+基于ros1.0 使用kinetic版本
+
+1、为什么使用ROS:
+a、点对点设计 b、分布式设计 、c、多语言 d、轻量级 e、免费且开源  f、社区完善
+ROS不是ide
+
+2、ROS主要stack：
+package 
+节点、节点管理器、参数服务器、消息、主题、服务、消息记录包
+
+ROS MAster:Talker \listener
+消息以一种publish、subscribe 的方式传递
+节点可以给定主题发布
+
+catKin：就是编译
+ROS编译系统
+ROS对CMake进行扩展
+适合ROS进行大型项目
+
+操作更加简单、一次配置多次使用
+
+ROS Master:ros的中心
+
+Package.xml:
+
+ROS NODE:一个节点就是ROS程序包中的可执行文件
+ROS节点可以使用ROS客户库与其他节点通行
+节点可以发布或者接受一个话题
+
+ROS TOPIC:
+节点之间通过ROS topic来回想通行
+通过publisher声明所发布topic名称
+通过subscriber声明所需要监听的topic名称
+
+常用命令：
+topic list 查看当前注册到ros master 的所有topic列表
+rostopic echo 把当前topic输出到控制台，方便调试和查看
+topic其实就是字符串
+
+ROS PARAM:命令允许我们在ROS参数服务器存储或者复制数据，参数服务器可以存储整数、浮点数、布尔值
+一个小型KV库
+
+常用命令：
+rosparam set 设置参数
+rosparam get 获取参数
+rosparam list 查看当前服务器上的参数
+
+监听者-发布者=实践
+http://wiki.ros.org/kinetic/installation/Ubuntu
+Ubuntu版本16。04需要xenial版本
+
+实战
+linux-命令行输入： mkdir -p ~/catkin_ws/src/
+                  examples.desktop
+                  gaz
+                  cd catkin_ws/
+                  catkin_Make
+                  source ~/.bashr^C
+                  ^C
+                  vim ~/.bashrc
+                  source ~/.bashrc
+                  clear
+                  
+                  catkin_make
+                  ls   ///////build devel src
+                  cd devel
+                  ls
+                  vim ~/.bashrc
+                  source ~/.bashrc
+                  cd ..
+                  cd -
+                  
+                  cd src/
+                  ls ///中有cMakeLists。
+                  
